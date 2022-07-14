@@ -13,10 +13,11 @@ body {
     height: inherit;
 } 
 
+@import "./commons/index.scss";
+
 @import "./variable.scss";
 @import "./input.scss";
 @import "./button.scss";
 
 @import "./views/login.scss";
 
-@import "./commons/index.scss"

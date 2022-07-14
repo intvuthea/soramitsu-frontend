@@ -1,7 +1,7 @@
 <template>
     <div class="content">
-        Home
-		{{ currentUser }}
+		Hello {{ currentUser?.username }} <br>
+		Ip: {{ currentUser?.ip }}
     </div>
 </template>
 
