@@ -27,39 +27,6 @@
 	</div>
 </template>
 
-<style lang="scss">
-	.error-mgs {
-		padding: 0 12px;
-		color: red;
-	}
-	.page {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 100%;
-		position: relative;
-	}
-
-	.card {
-
-		width: 500px;
-		background-color: white;
-		border-radius: 4px;
-		margin: 12px;
-
-		.title {
-			padding: 12px 24px;
-			font-size: 24px;
-			font-weight: bold;
-			border-bottom: 1px solid #d9d9d9;
-		}
-
-		.content {
-			padding: 12px;
-		}
-	}
-</style>
-
 <script>
 import { mapActions } from 'vuex';
 
