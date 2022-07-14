@@ -1,6 +1,6 @@
 <template>
     <div class="content">
-		Hello {{ currentUser?.username }} <br>
+		Hello: {{ currentUser?.username }} <br>
 		Ip: {{ currentUser?.ip }}
     </div>
 </template>
