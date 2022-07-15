@@ -26,7 +26,8 @@ export default {
                 return false
             }
         },
-        logout() {
+        async logout() {
+            await VueCookies.remove('token')
             return true
         },
         async getCurrentUser({commit}) {
