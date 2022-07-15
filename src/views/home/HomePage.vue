@@ -1,12 +1,16 @@
 <template>
     <div class="content">
-		Hello: {{ currentUser?.username }} <br>
-		Ip: {{ currentUser?.ip }}
+		<div>
+			Hello: {{ currentUser?.username }} <br>
+			Ip: {{ currentUser?.ip }}
+		</div>
+
+		<button class="btn btn-submit" @click="onLogoutClick()">{{ 'Login' }}</button>
     </div>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapActions, mapState } from 'vuex';
 
 export default {
 	computed: {
@@ -19,8 +23,15 @@ export default {
 	},
 	methods: {
 		...mapActions({
+			logout: 'auth/logout',
 			getCurrentUser: 'auth/getCurrentUser'
-		})
+		}),
+		async onLogoutClick() {
+			const isSuccess = await this.logout()
+			if (isSuccess) {
+				this.$router.push({name: 'auth.login'})
+			}
+		}
 	}
 }
 </script>

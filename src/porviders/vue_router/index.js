@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { authenticated } from "./middlewares/auth";
+// import { authenticated } from "./middlewares/auth";
 
 import auth from "./routes/auth";
 import error from "./routes/error";
@@ -15,7 +15,7 @@ const router = createRouter({
 })
 
 router.beforeEach( async (to, from) => {
-    authenticated({to, from, router})
+    // authenticated({to, from, router})
     
     const middlewares = to.meta?.middlewares ?? []
     const length = middlewares.length

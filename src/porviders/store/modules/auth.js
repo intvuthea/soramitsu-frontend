@@ -26,6 +26,9 @@ export default {
                 return false
             }
         },
+        logout() {
+            return true
+        },
         async getCurrentUser({commit}) {
             try {
                 const response = await AuthRequest.me()
